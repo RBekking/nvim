@@ -4,6 +4,9 @@ set nowrap
 set scrolloff=10
 set foldmethod=manual
 set colorcolumn=79
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
+set ma
+set autochdir
 
 colo onedark
 
@@ -40,6 +43,14 @@ let g:neomake_python_enabled_makers = ['flake8']
 call neomake#configure#automake('nrwi', 500)
 
 " Mappings
+xnoremap <Leader>s( xi()<Esc>P
+xnoremap <Leader>s[ xi[]<Esc>P
+xnoremap <Leader>s{ xi{}<Esc>P
+xnoremap <Leader>s' xi''<Esc>P
+xnoremap <Leader>s` xi``<Esc>P
+xnoremap <Leader>s" xi""<Esc>P
+xnoremap <Leader>s< xi<><Esc>P
+
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 noremap = :Neoformat<CR>
 tnoremap <Esc> <C-\><C-N>
