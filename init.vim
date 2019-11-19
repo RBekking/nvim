@@ -43,6 +43,8 @@ let g:neomake_python_enabled_makers = ['flake8']
 call neomake#configure#automake('nrwi', 500)
 
 " Mappings
+
+" Surround selection with pairing characters
 xnoremap <Leader>s( xi()<Esc>P
 xnoremap <Leader>s[ xi[]<Esc>P
 xnoremap <Leader>s{ xi{}<Esc>P
@@ -51,8 +53,13 @@ xnoremap <Leader>s` xi``<Esc>P
 xnoremap <Leader>s" xi""<Esc>P
 xnoremap <Leader>s< xi<><Esc>P
 
+" Tab completion 
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" Autoformat by pressing =
 noremap = :Neoformat<CR>
+
+" Moving between any window with Alt+hjkl (including a terminal buffer)
 tnoremap <Esc> <C-\><C-N>
 tnoremap <A-h> <C-\><C-N><C-w>h
 tnoremap <A-j> <C-\><C-N><C-w>j
