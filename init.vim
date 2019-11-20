@@ -7,10 +7,12 @@ set colorcolumn=79
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 set ma
 set autochdir
+setlocal spell spelllang=en_us
 
 colo onedark
 
 " Plugins
+
 call plug#begin('~\AppData\Local\nvim\plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'iCyMind/NeoSolarized'
@@ -52,6 +54,9 @@ xnoremap <Leader>s' xi''<Esc>P
 xnoremap <Leader>s` xi``<Esc>P
 xnoremap <Leader>s" xi""<Esc>P
 xnoremap <Leader>s< xi<><Esc>P
+
+" Cancel search highlight
+noremap <Leader><CR> :nohl<CR>
 
 " Tab completion 
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
