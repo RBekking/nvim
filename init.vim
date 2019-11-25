@@ -1,12 +1,17 @@
 set nu
 set rnu
 set nowrap
-set scrolloff=10
+set scrolloff=3
 set foldmethod=manual
 set colorcolumn=79
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 set ma
+set ignorecase smartcase
 set autochdir
+set splitright
+set splitbelow
+set autowrite
+set hidden
 setlocal spell spelllang=en_us
 
 
