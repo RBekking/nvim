@@ -9,7 +9,6 @@ set ma
 set autochdir
 setlocal spell spelllang=en_us
 
-colo onedark
 
 " Plugins
 
@@ -28,6 +27,8 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 call plug#end()
+
+colo onedark
 
 let g:python3_host_prog = "C:/Windows/python.exe"
 let g:python2_host_prog = "C:/Windows/python.exe"
