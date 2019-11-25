@@ -63,13 +63,13 @@ nnoremap <C-K> m`O<Esc>``
 nnoremap <Enter> m`o<Esc>``
 
 " Surround selection with pairing characters
-xnoremap <Leader>s( xi()<Esc>P
-xnoremap <Leader>s[ xi[]<Esc>P
-xnoremap <Leader>s{ xi{}<Esc>P
-xnoremap <Leader>s' xi''<Esc>P
-xnoremap <Leader>s` xi``<Esc>P
-xnoremap <Leader>s" xi""<Esc>P
-xnoremap <Leader>s< xi<><Esc>P
+xnoremap <Leader>s( s()<Esc>P
+xnoremap <Leader>s[ s[]<Esc>P
+xnoremap <Leader>s{ s{}<Esc>P
+xnoremap <Leader>s' s''<Esc>P
+xnoremap <Leader>s` s``<Esc>P
+xnoremap <Leader>s" s""<Esc>P
+xnoremap <Leader>s< s<><Esc>P
 
 " Cancel search highlight
 noremap <Leader><CR> :nohl<CR>
