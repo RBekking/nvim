@@ -52,6 +52,16 @@ call neomake#configure#automake('nrwi', 500)
 
 " Mappings
 
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+
+" Insert newline without going into INSERT mode
+nnoremap <S-J> m`<S-A><Del><Esc>``
+nnoremap <C-J> i<CR><Esc>^
+nnoremap <C-K> m`O<Esc>``
+nnoremap <Enter> m`o<Esc>``
+
 " Surround selection with pairing characters
 xnoremap <Leader>s( xi()<Esc>P
 xnoremap <Leader>s[ xi[]<Esc>P
@@ -84,3 +94,4 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
