@@ -30,7 +30,9 @@ Plug 'davidhalter/jedi-vim'
 Plug 'neomake/neomake'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'plasticboy/vim-markdown'
+Plug 'lambdalisue/vim-fullscreen'
 call plug#end()
 
 colo onedark
@@ -50,16 +52,16 @@ let g:deoplete#enable_at_startup = 1
 let g:neomake_python_enabled_makers = ['flake8']
 call neomake#configure#automake('nrwi', 500)
 
-" Mappings
+let g:fullscreen#start_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 1)"
+let g:fullscreen#stop_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 0)"
 
-" Visual shifting (does not exit Visual mode)
-vnoremap < <gv
-vnoremap > >gv
+" Mappings
 
 " Insert newline without going into INSERT mode
 nnoremap <S-J> m`<S-A><Del><Esc>``
 nnoremap <C-J> i<CR><Esc>^
 nnoremap <C-K> m`O<Esc>``
+nnoremap <S-K> m`kdd``
 nnoremap <Enter> m`o<Esc>``
 
 " Surround selection with pairing characters
@@ -94,4 +96,8 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
 
