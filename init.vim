@@ -58,7 +58,6 @@ let g:fullscreen#stop_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 0)
 " Mappings
 
 " Insert newline without going into INSERT mode
-nnoremap <S-J> m`<S-A><Del><Esc>``
 nnoremap <C-J> i<CR><Esc>^
 nnoremap <C-K> m`O<Esc>``
 nnoremap <S-K> m`kdd``
