@@ -14,6 +14,8 @@ set autowrite
 set hidden
 setlocal spell spelllang=en_us
 
+" Automatically place buffers in tabs
+:au BufAdd,BufNewFile * nested tab sball
 
 " Plugins
 
