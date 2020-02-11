@@ -54,8 +54,8 @@ let g:deoplete#enable_at_startup = 1
 let g:neomake_python_enabled_makers = ['flake8']
 call neomake#configure#automake('nrwi', 500)
 
-let g:fullscreen#start_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 1)"
-let g:fullscreen#stop_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 0)"
+set g:fullscreen#start_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 1)"
+set g:fullscreen#stop_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 0)"
 
 " Mappings
 
@@ -83,6 +83,10 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " Autoformat by pressing =
 noremap = :Neoformat<CR>
 
+" Navigating between tab-pages
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
 " Moving between any window with Alt+hjkl (including a terminal buffer)
 tnoremap <Esc> <C-\><C-N>
 tnoremap <A-h> <C-\><C-N><C-w>h
@@ -99,6 +103,7 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 " Visual shifting (does not exit Visual mode)
-vnoremap < <gv
 vnoremap > >gv
+" <s-lt> is a workaround for the '<' bug in nvim-qt
+vnoremap <s-lt> <gv
 
